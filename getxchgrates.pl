@@ -46,8 +46,8 @@ for my $i (0 .. $#files)
 	my $xml = XMLin($fn);
 	print $outh $xml->{data_publikacji}.',';
 	print $outh $xml->{pozycja}[7]{kurs_sredni} =~ s/,/./r .',';
-	print $outh $xml->{pozycja}[7]{kurs_sredni} =~ s/,/./r .',';
-	print $outh $xml->{pozycja}[7]{kurs_sredni} =~ s/,/./r .',';
-	print $outh $xml->{pozycja}[7]{kurs_sredni} =~ s/,/./r ."\n";
+	print $outh $xml->{pozycja}[1]{kurs_sredni} =~ s/,/./r .',';
+	print $outh $xml->{pozycja}[9]{kurs_sredni} =~ s/,/./r .',';
+	print $outh $xml->{pozycja}[10]{kurs_sredni} =~ s/,/./r ."\n";
 
 }
