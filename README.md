@@ -5,7 +5,7 @@ Various Perl scripts
 
 1. Download the script to empty folder
 2. Go to script folder
-3. Run "script_name" with eventually added options or folders/files
+3. Run "script_name" with eventually added options or folder/file names
 
 ## Prerequisites
 
@@ -22,6 +22,18 @@ Usually no tests included.
 ## Purpose
 
 Learn, use and have fun.
+
+getxchgrates.pl - download and parse exchange rates for Polish zloty PLN to Dygraph format
+
+hashes.pl - make hashes from passwords file
+
+hashes2.pl - make a different line endings from hashes file
+
+same_content.pl - compare .txt files and remove the shorter ones but the same as other file
+
+suffixes.pl - multiply passwords file with suffixes
+
+website_dos.pl - small script to test mod_dosevasive's effectiveness
 
 ## Built With
 
