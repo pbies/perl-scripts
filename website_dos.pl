@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# (C) 2019 Piotr Biesiada
 
 # small script to test mod_dosevasive's effectiveness
 
