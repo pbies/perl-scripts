@@ -1,4 +1,7 @@
 #!/usr/bin/perl
+# (C) 2020 Piotr Biesiada
+
+# Perl script to download and parse exchange rates for Polish zloty PLN to Dygraph format
 
 use IO::Socket;
 use strict;
