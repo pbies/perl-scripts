@@ -1,9 +1,5 @@
 #!/usr/bin/perl
 
-# (C) 2020 Piotr Biesiada
-
-# Perl script to download and parse exchange rates for Polish zloty PLN to Dygraph format
-
 use IO::Socket;
 use strict;
 use warnings;
@@ -17,15 +13,14 @@ my $file = 'dir.txt';
 getstore( $url, $file );
 
 open my $handle, '<', $file;
-chomp( my @lines = <$handle> );
+my @lines = <$handle>;
 close $handle;
 
 my @files;
 
 foreach (@lines) {
     if ( ord($_) == 97 ) {
-        chomp($_);
-        push @files, $_;
+        push @files, substr($_,0,11);
     }
 }
 
@@ -34,10 +29,11 @@ open( my $outh, '>', 'output.txt' );
 print $outh "D,GBP,EUR,CHF,USD,NOK\n";
 
 for my $i ( 0 .. $#files ) {
+    print "\r" . $i . "/" . $#files;
+    select()->flush();
     my $fn = $files[$i];
-    $fn=substr($fn,0,11);
-    $fn = $fn . '.xml';
-    my $url = 'http://www.nbp.pl/kursy/xml/' . $fn;
+    my $url = 'http://www.nbp.pl/kursy/xml/' . $fn . '.xml';
+    $fn=$fn . ".txt";
 
     getstore( $url, $fn );
 
@@ -49,5 +45,6 @@ for my $i ( 0 .. $#files ) {
     print $outh $dom->findvalue('//pozycja/kod_waluty[text()=\'CHF\']/../kurs_sredni') =~ s/,/./r . ',';
     print $outh $dom->findvalue('//pozycja/kod_waluty[text()=\'USD\']/../kurs_sredni') =~ s/,/./r . ',';
     print $outh $dom->findvalue('//pozycja/kod_waluty[text()=\'NOK\']/../kurs_sredni') =~ s/,/./r . "\n";
-
 }
+
+print "\nAll ok!\n";
