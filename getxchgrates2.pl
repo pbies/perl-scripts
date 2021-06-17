@@ -1,7 +1,11 @@
 #!/usr/bin/perl
-# (C) 2020 Piotr Biesiada
+
+# (C) 2021 Piotr Biesiada
 
 # Perl script to download and parse exchange rates for Polish zloty PLN to Dygraph format
+
+# perl -MCPAN -e shell
+# install XML::LibXML
 
 use IO::Socket;
 use strict;

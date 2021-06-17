@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-# (C) 2020 Piotr Biesiada
+# (C) 2021 Piotr Biesiada
 use strict;
 use warnings;
 use IO::Handle;
