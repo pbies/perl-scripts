@@ -7,11 +7,11 @@ use Digest::SHA qw(sha1_hex sha256_hex sha512_hex);
 use MIME::Base64;
 
 sub measure_time(&) {
-    my($btime, $etime);
-    $btime = time();
-    &{$_[0]}();
-    $etime = time();
-    warn "elapsed time was: ", $etime - $btime, " s\n";
+	my($btime, $etime);
+	$btime = time();
+	&{$_[0]}();
+	$etime = time();
+	warn "elapsed time was: ", $etime - $btime, " s\n";
 };
 
 my $infn="list.txt";

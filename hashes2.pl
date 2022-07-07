@@ -4,11 +4,11 @@ use strict;
 use warnings;
 
 sub measure_time(&) {
-    my($btime, $etime);
-    $btime = time();
-    &{$_[0]}();
-    $etime = time();
-    warn "elapsed time was: ", $etime - $btime, " s\n";
+	my($btime, $etime);
+	$btime = time();
+	&{$_[0]}();
+	$etime = time();
+	warn "elapsed time was: ", $etime - $btime, " s\n";
 };
 
 my $infn="hashes.txt";
