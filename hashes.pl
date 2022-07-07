@@ -1,5 +1,4 @@
 #!/usr/bin/env perl
-# (C) 2021 Piotr Biesiada
 use strict;
 use warnings;
 use Digest::MD5 qw(md5_hex);
