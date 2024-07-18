@@ -62,7 +62,7 @@
 	Authors
 	-------
 
-		Piotr Biesiada - Initial work
+		me - Initial work
 
 	License
 	-------
@@ -81,4 +81,4 @@
 
 		If you like my work please share your opinion with me!
 
-		ptrbsd (at) gmail
+		pikob1 (at) gmail
